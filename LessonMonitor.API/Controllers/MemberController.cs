@@ -38,7 +38,8 @@ namespace LessonMonitor.API.Controllers
             var member = _mapper.Map<Core.Member>(newMember);
 
             var memberId = await _memberService.Create(member);
-            return Ok(memberId);
+
+            return Ok(new { MemberId = memberId });
         }
     }
 }

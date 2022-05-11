@@ -8,6 +8,9 @@ namespace LessonMonitor.API
         {
             CreateMap<Core.Member, Contracts.Member>().ReverseMap();
             CreateMap<Contracts.NewMember, Core.Member>();
+
+            CreateMap<Core.Lesson, Contracts.Lesson>().ReverseMap();
+            CreateMap<Contracts.NewLesson, Core.Lesson>();
         }
     }
 }

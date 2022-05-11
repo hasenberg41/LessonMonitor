@@ -37,6 +37,9 @@ namespace LessonMonitor.API
             services.AddScoped<IMembersRepository, MembersRepository>();
             services.AddScoped<IMembersService, MembersService>();
 
+            services.AddScoped<ILessonService, LessonService>();
+            services.AddScoped<ILessonsRepository, LessonsRepository>();
+
             services.AddDbContext<LessonMonitorDbContext>(builder =>
             {
                 builder.UseSqlServer(Configuration.GetConnectionString("MSSQL"));
